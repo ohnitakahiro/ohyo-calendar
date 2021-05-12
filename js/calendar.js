@@ -101,3 +101,17 @@ function showCalendar(month, year) {
 function daysInMonth(iMonth, iYear) {
   return 32 - new Date(iYear, iMonth, 32).getDate();
 }
+
+function buttonClick(){
+  alert('おはようございます！');
+
+  //時刻データを取得して変数jikanに格納する
+  var jikan= new Date();
+
+  //時・分・秒を取得する
+  var hour = jikan.getHours();
+  var minute = jikan.getMinutes();
+  var second = jikan.getSeconds();
+
+  document.getElementById('kisyou-jikoku').innerHTML = "起床時刻：" + (hour+"時"+minute+"分"+second+"秒");
+}
